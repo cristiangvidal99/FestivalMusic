@@ -2,14 +2,14 @@ const { src, dest, watch } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
 function css(done) {
-    src('src/scss/app.scss')
+    src('src/scss/**/*.scss')
         .pipe(sass())
         .pipe(dest('build/css'))
     done();
 }
 
 function dev(done) {
-    watch('src/scss/app.scss', css); // lleva dos parametros.
+    watch('src/scss/**/*.scss', css); // lleva dos parametros.
     done();
 }
 
