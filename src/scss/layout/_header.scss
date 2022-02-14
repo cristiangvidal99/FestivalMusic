@@ -4,16 +4,38 @@
 
 .header {
     background-color: v.$green;
-
     h1 {
+        text-align: center;
         color: v.$white;
+        margin: 0;
+        @include m.tablet {
+            margin: 0;
+        }
     }
+    .header-content {
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem;
+        }
+    }
+
 }
 .main-navigator {
-
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+    }
     a {
+        display: block;
         color: v.$white;
+        text-align: center;
         font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
 
         &:hover {
             color: v.$yellow;
